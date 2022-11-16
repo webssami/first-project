@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> toggle slide</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){ //jQuery 시작
+            var duration = 300;
+            var $aside = $('.page-main aside');
+            var $adBtn = $aside.find('button');
+            
+            $adBtn.click(function(){
+                $aside.toggleClass('open');
+                
+                if($aside.hasClass('open')==true){
+                    $aside.stop().animate({
+                        left:'-70px'
+                    },duration);
+                    
+                    $adBtn.find('img').attr({
+                        src:'j_img/toggle_win_img/btn_close.png',
+                        alt:'close'
+                    });
+                    
+                }else{
+                    $aside.stop().animate({
+                        left:'-350px'
+                    },duration);
+                    
+                    $adBtn.find('img').attr({
+                        src:'j_img/toggle_win_img/btn_open.png',
+                        alt:'open'
+                    });
+                }
+                
+            });
+            
+            
+        });//jQuery 종료
+
+    </script>
+    <link rel="stylesheet" href="j_css/reset.css">
+    <style>
+        body{
+            background: #656565;
+        }
+        .page-main{
+            position: relative;
+        }
+        .page-main aside{
+            background: rgba(0,0,0,0.8);
+            position: fixed;
+            width: 350px;
+            top: 0;
+            bottom: 0;
+            left: -350px;
+        }
+        .page-main aside ul{
+            position: absolute;
+            top: 50px;
+            left: 115px;
+        }
+        .page-main aside ul li{
+            margin-bottom: 20px;
+        }
+        .page-main aside button{
+            position: absolute;
+            left: 350px;
+            top: 100px;
+            background: rgba(0,0,0,0.8);
+            border: 0;
+            cursor: pointer;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <!--div.page-main>aside>(ul>li*3>a[href=#]>img)+button>img-->
+    <div class="page-main">
+        <aside>
+            <ul>
+                <li><a href="#"><img src="j_img/toggle_win_img/01_aside.png" alt="link1"></a></li>
+                <li><a href="#"><img src="j_img/toggle_win_img/02_aside.png" alt="link2"></a></li>
+                <li><a href="#"><img src="j_img/toggle_win_img/03_aside.png" alt="link3"></a></li>
+            </ul>
+            <button><img src="j_img/toggle_win_img/btn_open.png" alt="open"></button>
+        </aside>
+    </div>
+</body>
+</html>

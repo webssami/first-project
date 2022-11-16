@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> rollover image</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){ //jQuery 시작
+            $('.over_navi li a img').mouseover(function(){
+                $(this).attr({
+                    src : $(this).attr('data-img') + '2.jpg'
+                });
+            }).mouseout(function(){
+                $(this).attr({
+                    src : $(this).attr('data-img') + '1.jpg'
+                });
+            });
+            
+            
+            
+        });//jQuery 종료
+
+    </script>
+    <style>
+        li{
+            list-style: none;
+        }
+        .over_navi{
+            display: flex;
+        }
+    
+    </style>
+</head>
+<body>
+    <!--ul.over_navi>li>a>img-->
+    <ul class="over_navi">
+        <li>
+            <a href="#">
+                <img src="j_img/roll_img/img_r1_1.jpg" data-img="j_img/roll_img/img_r1_" alt="찜닭">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="j_img/roll_img/img_r2_1.jpg" data-img="j_img/roll_img/img_r2_" alt="음주">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="j_img/roll_img/img_r3_1.jpg" data-img="j_img/roll_img/img_r3_" alt="너구리">
+            </a>
+        </li>
+        
+    </ul>
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그라디언트 스타일</title>
+    <style>
+        .title{
+            width: 400px;
+            border: 60px;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 60px;
+            background: linear-gradient(45deg, rgb(30,87,153) 0%,rgb(41,137,216) 30%,rgb(41,137,216) 30%,rgb(89,81,204) 44%,rgb(89,81,204) 61%,rgb(125,185,232) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        }
+        .title span{
+            background: linear-gradient(to right, #fbcac9, #8ca6ce);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color:transparent;
+        }
+        .btn{
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .btn li{
+            list-style: none;
+            float: left;
+            /* border: 1px solid #000; */
+            border-radius: 5px;
+            margin-right: 20px;
+            width: 80px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .btn li a{
+            text-decoration: none;
+            color: #fff;
+            display: block;
+        }
+        .btn li:nth-child(1){
+            background: linear-gradient(to bottom, rgb(224,158,226) 0%,rgb(163,75,161) 50%,rgb(209,108,202) 100%);
+        }
+        .btn li:nth-child(2){
+            background: linear-gradient(to bottom, rgb(248,168,136) 0%,rgb(219,86,19) 50%,rgb(244,139,74) 100%);
+        }
+        .btn li:nth-child(3){
+            background: linear-gradient(to bottom, rgb(136,220,248) 0%,rgb(19,159,219) 50%,rgb(74,184,244) 100%);
+        }
+        h3:nth-of-type(2){
+            color: #f00;
+        }
+        h4:nth-of-type(1){
+            color: #00f;
+        }
+        h4:last-of-type{
+            background:#ff0;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 class="title"><span>TEXT GRADIENT!</span></h1>  
+    <nav>
+        <ul class="btn">
+            <li><a href="#">button</a></li>
+            <li><a href="#">button</a></li>
+            <li><a href="#">button</a></li>
+        </ul>
+    </nav>
+    <h3>제목태그3</h3>
+    <h4>제목태그4</h4>
+    <h3>제목태그3</h3>
+    <h3>제목태그3</h3>
+    <h4>제목태그4</h4>
+
+</body>
+</html>

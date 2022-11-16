@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> hasClass, toggleClass </title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){ //jQuery 시작
+            $('button').click(function(){
+                $('#text').toggleClass('red');
+                
+                console.log($('#text').hasClass('red'));
+            });
+            
+            
+            
+        });//jQuery 종료
+
+    </script>
+    <style>
+        .red{
+            color: #f00;
+        }
+    
+    </style>
+</head>
+<body>
+    <button>클래스 적용버튼</button>
+    <div id="text">내용</div>
+</body>
+</html>

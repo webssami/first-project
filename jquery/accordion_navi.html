@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> accordion navigation </title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){ //jQuery 시작
+            $('#accordion_navi ul li .navi_sec').hide();
+           // $('#accordion_navi ul li .navi_sec').eq(0).show();
+           //$('#accordion_navi > ul > li:eq(0) > a').addClass('on');
+            
+            
+            //대메뉴 클릭시 서브메뉴 펼침
+            $('#accordion_navi > ul > li > a').click(function(){
+                $(this).toggleClass('on');
+                $('#accordion_navi > ul > li > a').not(this).removeClass('on');
+                
+                $(this).find('+.navi_sec').slideToggle('fast');
+                $('#accordion_navi > ul > li > a').not(this).find('+.navi_sec').slideUp('fast');
+            });
+            
+        });//jQuery 종료
+
+    </script>
+    <link rel="stylesheet" href="j_css/reset.css">
+    <style>
+        #accordion_navi{
+            width: 180px;
+            float: left;
+            margin: 10px;
+        }
+        #accordion_navi > ul > li > a{
+            height: 25px;
+            line-height: 25px;
+            display: block;
+            background: #f9c;
+            color: #fff;
+            border-bottom: 1px solid #fff;
+            font-size: 15px;
+            text-indent: 10px;
+        }
+        #accordion_navi > ul > li > a.on{
+            background: #d9006c;
+            cursor: default;
+        }
+        #accordion_navi > ul > li .navi_sec ul{
+            padding-bottom: 20px;
+        }
+        #accordion_navi > ul > li .navi_sec ul li a{
+            display: block;
+            text-indent: 10px;
+            height: 25px;
+            line-height: 25px;
+        }
+        #accordion_navi > ul > li .navi_sec ul li a:hover{
+            background: #ffe8f3;
+            color: #d9006c;
+        }
+    </style>
+</head>
+<body>
+    <!--nav#accordion_navi>ul>li>a-->
+    <nav id="accordion_navi">
+        <ul>
+            <li><!--1-->
+                <a href="#">HTML</a>
+                <!--.navi_sec>ul>li*3>a[href=#]{- }-->
+                <div class="navi_sec">
+                    <ul>
+                        <li><a href="#">- html1.0</a></li>
+                        <li><a href="#">- html2.0</a></li>
+                        <li><a href="#">- html3.0</a></li>
+                        <li><a href="#">- html4.0</a></li>
+                        <li><a href="#">- xhtml1.0</a></li>
+                        <li><a href="#">- html5.0</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><!--2-->
+                <a href="#">CSS</a>
+                <!--.navi_sec>ul>li*3>a[href=#]{- }-->
+                <div class="navi_sec">
+                    <ul>
+                        <li><a href="#">- css1</a></li>
+                        <li><a href="#">- css2</a></li>
+                        <li><a href="#">- css3</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><!--3-->
+                <a href="#">API</a>
+                <!--.navi_sec>ul>li*3>a[href=#]{- }-->
+                <div class="navi_sec">
+                    <ul>
+                        <li><a href="#">- api</a></li>
+                        <li><a href="#">- DOM</a></li>
+                    </ul>
+                </div>
+            </li>
+            
+        </ul>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> click event - 이미지 변경 </title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){ //jQuery 시작
+            $('button').click(function(){
+               // $('figure img').attr('src','j_img/photo_sb/gallery_2s.jpg').attr('alt','사진2');
+                
+                $('figure img').attr({
+                    src : 'j_img/photo_sb/gallery_2s.jpg',
+                    alt : '사진2'
+                });
+            });
+            
+            
+            
+        });//jQuery 종료
+
+    </script>
+    <style>
+        
+    
+    </style>
+</head>
+<body>
+    <button>사진 변경</button>
+    <figure>
+        <img src="j_img/photo_sb/gallery_1s.jpg" alt="사진1">
+    </figure>
+</body>
+</html>

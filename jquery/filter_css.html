@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){ //jQuery 시작
+           $('.selector li:odd').css('color','#f00');
+            $('.selector li:even').css('color','#00f');    
+            $(':header').css('background','#ff0');
+            
+            //문자를 포함한 태그 찾기
+            $('.selector li:contains("텍스트")').css('text-decoration','underline');
+            
+            //has : strong 태그를 포함한 li
+            $('.selector li:has(strong)').css('background','#0f0');
+            
+            //메소드 체인
+            $('h1').css('padding','10px').css('font-size','25px');
+            
+            //복수 스타일
+            $('p.text').css({
+                backgroundColor : '#ff0',
+                fontWeight:'bold',
+                fontSize:'14px',
+                color:'#f00',
+                width:'300px',
+                padding:'2px',
+                height:'100px',
+                textAlign:'center',
+                lineHeight:'100px'
+            });
+            
+        });//jQuery 종료
+
+    </script>
+    <style>
+        
+    
+    </style>
+</head>
+<body>
+   <h1>jQuery</h1>
+   <h3>jQuery filter</h3>
+    <!--ul.selector>li#first{텍스트 JQuery}*4-->
+    <ul class="selector">
+        <li id="first">텍스트 JQuery</li>
+        <li class="second">text JQuery</li>
+        <li id="third">텍스트 <strong>JQuery</strong></li>
+        <li class="fourth">text JQuery</li>
+    </ul>
+    
+    <p class="text">
+        복수 스타일
+    </p>
+    
+    
+    
+    
+</body>
+</html>

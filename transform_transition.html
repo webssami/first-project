@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform:변형, transition:시간차를 이용한 애니메이션</title>
+    <style>
+        #images figure{
+            background:#eee;
+            margin: 20px 0;
+        }
+        #images figure img{
+            border:1px solid #000;
+        }
+        #images figure:nth-child(1) img{
+            transform: rotate(0deg);
+            opacity: 0.5;
+            transition:all 0.3s ease-out;
+        }
+        #images figure:nth-child(1) img:hover{
+            transform: rotate(360deg);
+            opacity: 1;
+        }
+        #images figure:nth-child(2){
+            width:90px;
+            overflow: hidden;
+        }
+        #images figure:nth-child(2) img{
+            transform: scale(1,1);
+            transition:0.5s;
+        }
+        #images figure:nth-child(2) img:hover{
+            transform: scale(1.5,1.5);
+           
+        }
+        #images figure:nth-child(3) img{
+            transform: skew(0deg, 10deg);
+           
+        }
+        #images figure:nth-child(4) img{
+            transform: translate(50px, -10px);
+           
+        }
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* gallery - 마우스 오버시 박스가 올라옴  */
+        #gallery {
+            width:640px;
+        }
+        #gallery ul li{
+            float: left;
+            margin: 0 5px;
+            list-style: none;
+        }
+        #gallery ul li a{
+            position: relative;
+            display: block;
+            overflow: hidden;
+        }
+        .box{
+            position: absolute;
+            top:100%;
+            left: 0;
+            background:#2424ad;
+            color: #fff;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+            transition:0.5s;
+        }
+        #gallery ul li a:hover .box{
+            top:0;
+        }
+    </style>
+</head>
+<body>
+    <div id="images">
+        <figure><img src="img/abo_img/img_a.gif" alt="A형"></figure>
+        <figure><img src="img/abo_img/img_ab.gif" alt="AB형"></figure>
+        <figure><img src="img/abo_img/img_b.gif" alt="B형"></figure>
+        <figure><img src="img/abo_img/img_o.gif" alt="O형"></figure>
+    </div>
+    
+    
+    <div id="gallery">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="img/photo_sb/gallery_1s.jpg" alt="사진1">
+                    <div class="box">
+                        사진1
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/photo_sb/gallery_2s.jpg" alt="사진2">
+                    <div class="box">
+                        사진2
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/photo_sb/gallery_3s.jpg" alt="사진3">
+                    <div class="box">
+                        사진3
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/photo_sb/gallery_4s.jpg" alt="사진4">
+                    <div class="box">
+                        사진4
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

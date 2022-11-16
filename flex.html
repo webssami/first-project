@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        
+        .container{
+            background: #00f;
+            display: flex;
+            justify-content: space-around;
+            /*height: 100px;*/
+            /*align-items: stretch;*/
+            flex-wrap: wrap;
+        }
+        .item{
+            color: #fff;
+            border: 1px solid #fff;
+            width: 100px;
+            padding: 5px;
+            background: #f59700;
+            /*margin: 0 2px;*/
+            /*flex-grow: 1;*/
+        }
+        .item:nth-child(3){
+            flex-grow: 4;
+        }
+        .item:nth-child(5){
+            flex-shrink: 5;
+        }
+    
+    </style>
+</head>
+<body>
+    <!--ul.container>li.item{i$}*5-->
+    <ul class="container">
+        <li class="item">i1</li>
+        <li class="item">i2<br>i2</li>
+        <li class="item">i3</li>
+        <li class="item">i4</li>
+        <li class="item">i5</li>
+    </ul>
+</body>
+</html>

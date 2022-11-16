@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>semantic tag</title>
+    <style>
+        /*스타일 영역*/
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1{
+            color: #f5792b;
+        }
+        section aside{
+            color: #0000ff;
+            /*font-weight: bold;
+            font-size:1.5em;150%, 기본크기:16px
+            line-height: 3em;
+            font-family: '궁서';*/
+            font:bold 1.5em /3em '궁서', serif;
+            /* 단축표기시 폰트크기와 글씨체는 반드시 입력 */
+            letter-spacing: -3px;
+        }
+        #sec1{
+            background:#ff0;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        #sec2{
+            background-color: #caebae;
+        }
+        .line{
+            text-decoration: underline;
+        }
+        span, address{
+            font-weight: bold;
+        }
+        address{
+            font-style: normal;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header><!--헤더영역-->
+        <h1>HTML5</h1>
+    </header>
+    <article>
+        <section id="sec1">
+            <h2>
+            html5특징 -<time datetime="2021-03-21T07:10" class="line">2021년 3월 21일</time></h2>
+            <nav>
+                <ul>
+                    <li><a href="#">menu01</a></li>
+                    <li><a href="#">menu02</a></li>
+                    <li><a href="#">menu03</a></li>
+                </ul>
+            </nav>
+        </section>
+        
+        <section id="sec2">
+            <h2> <mark class="line">이미지</mark> 보여주기</h2>
+            
+            <figure>
+                <img src="img/flower2.jpg" alt="벚꽃">
+                <figcaption>벚꽃 나무</figcaption>
+            </figure>
+            <aside>보충내용</aside>
+            <span>인라인요소 태그</span>
+        </section>
+        <aside>보충내용</aside>
+    </article>
+    <footer>
+        <address>Copyright &copy;</address>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> toggle()메소드 활용 제휴사이트 </title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){ //jQuery 시작
+            $('#list_box > strong').click(function(){
+                $('#list_box > ul').toggle();
+                $('#list_box > strong .material-icons').toggleClass('up');
+            });
+            
+            
+            
+        });//jQuery 종료
+
+    </script>
+    <link rel="stylesheet" href="j_css/reset.css">
+    <style>
+        #list_box{
+            width: 150px;
+            height: 30px;
+            position: relative;
+        }
+        #list_box > strong{
+            border:1px solid #aaa;
+            display: block;
+            line-height: 30px;
+            text-indent: 5px;
+            cursor: pointer;
+        }
+        #list_box > strong .material-icons{
+            float: right;
+            padding-top: 4px;
+        }
+        #list_box > strong .material-icons.up{
+            transform: rotate(180deg);
+            padding-top: 0;
+            padding-bottom: 4px;
+        }
+        #list_box > ul{
+            position: absolute;
+            left: 0;
+            top: 31px;
+            border:1px solid #aaa;
+            width: 100%;
+            box-sizing: border-box;
+            display: none;
+        }
+        #list_box > ul li a{
+            display: block;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+        }
+        #list_box > ul li a:hover{
+            background: #ddd;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <!--#list_box>strong{제휴사이트}-->
+    <div id="list_box">
+        <strong>제휴사이트
+            <span class="material-icons">
+            expand_more
+            </span>
+        </strong>
+        <!--ul>li*4>a[href=#]{사이트$}-->
+        <ul>
+            <li><a href="#">사이트1</a></li>
+            <li><a href="#">사이트2</a></li>
+            <li><a href="#">사이트3</a></li>
+            <li><a href="#">사이트4</a></li>
+        </ul>
+    </div><!--list_box-->
+</body>
+</html>

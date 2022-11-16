@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>그라디언트 - 일반구조선택자 - 형태구조 선택자</title>
+    <style>
+        
+        @font-face {
+        font-family :'na'; /* font-family에 적을 임의 명칭*/
+        src: url('font/NanumGothic.eot');  /*// 폰트 경로*/
+        src: local('na'), url('font/NanumGothic.woff') format('woff'), url('font/NanumGothic.ttf') format('truetype'); 
+            /*// eot 못 읽힐 때 woff, ttf 파일 찾음*/
+        }
+        
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            width: 300px;
+            height: 100px;
+            border:5px solid #000;
+            text-align: center;
+            line-height: 100px;
+            background: linear-gradient(to bottom, #fec6ff 0%,#3a74aa 100%);
+            font-family: 'na';
+        }
+        
+        #btn ul li{
+            list-style: none;
+            display: inline-block;
+            margin: 10px;
+        }
+        #btn ul li a{
+            border:1px solid #aaa;
+            display: block;
+            width:100px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+        #btn ul li:nth-child(1) a{
+            background: linear-gradient(to bottom, #fb83fa 0%,#870c8c 75%);
+        }
+        #btn ul li:nth-child(2) a{
+            background: linear-gradient(to bottom, #fbd383 0%,#8c5b0c 75%);
+        }
+        #btn ul li:nth-child(3) a{
+            background: linear-gradient(to bottom, #8d83fb 0%,#100c8c 75%);
+        }
+        
+        #btn2{
+            width:700px;
+            margin: 10px;
+            overflow: hidden;
+        }
+        #btn2 ul li{
+            float: left;
+            list-style: none;
+        }
+        #btn2 ul li a{
+            display: block;
+            width:100px;
+            height: 40px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+        }
+        /*#btn2 ul li:nth-child(2n+1) a{
+            background: #881212;
+        }
+        #btn2 ul li:nth-child(2n) a{
+            background: #c73d3d;
+        }*/
+        #btn2 ul li:nth-child(odd) a{
+            background: #881212;
+        }
+        #btn2 ul li:nth-child(even) a{
+            background: #c73d3d;
+        }
+        #btn2 ul li:first-child a{
+            border-radius: 10px 0 0 10px;
+        }
+        #btn2 ul li:last-child a{
+            border-radius: 0 10px 10px 0;
+        }
+        /*#btn2 ul li:nth-child(3) a:hover{
+            background: #000;
+        }*/
+        
+        #btn2 ul li:nth-child(3):hover a{
+            background: #000;
+        }
+        h2:nth-of-type(2){
+            color: #f00;
+        }
+        h2:nth-of-type(3){
+            color: #00f;
+        }
+    </style>
+</head>
+<body>
+    <h1>그라디언트 작업</h1>
+    
+    <nav id="btn">
+        <ul>
+            <li><a href="#">button</a></li>
+            <li><a href="#">button</a></li>
+            <li><a href="#">button</a></li>
+        </ul>
+    </nav>
+    
+    <nav id="btn2">
+        <ul>
+            <li><a href="#">menu01</a></li>
+            <li><a href="#">menu02</a></li>
+            <li><a href="#">menu03</a></li>
+            <li><a href="#">menu04</a></li>
+            <li><a href="#">menu05</a></li>
+            <li><a href="#">menu06</a></li>
+            <li><a href="#">menu07</a></li>
+        </ul>
+    </nav>
+    
+    <h2>h2</h2>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h3>h3</h3>
+    <h2>h2</h2>
+    
+    
+    
+</body>
+</html>

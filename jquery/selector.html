@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){ //jQuery 시작
+            $('li').css('color','#f00');
+            $('#first').css('color','#00f');
+            $('.second').css('font-size','2em');
+            $('#third strong').css('color', '#0f0');
+            $('ul.selector li[id]').css('background', '#ff0');
+            $('li[class="fourth"]').css('text-decoration', 'underline');
+            
+            
+            
+            
+        });//jQuery 종료
+
+    </script>
+    <style>
+        
+    
+    </style>
+</head>
+<body>
+    <!--ul.selector>li#first{텍스트 JQuery}*4-->
+    <ul class="selector">
+        <li id="first"><strong>텍스트</strong> JQuery</li>
+        <li class="second">텍스트 JQuery</li>
+        <li id="third">텍스트 <strong>JQuery</strong></li>
+        <li class="fourth">텍스트 JQuery</li>
+    </ul>
+</body>
+</html>

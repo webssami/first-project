@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gallery</title>
+    <link rel="stylesheet" href="css/gallery_style.css">
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h2>홈</h2>
+            <nav>
+                <!--ul>li*5>a[href=#]-->
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li class="on"><a href="#">전시소개</a>
+                        <!--ul>li*2>a-->
+                        <ul>
+                            <li><a href="#">전시소개</a></li>
+                            <li><a href="#">관람포인트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">작품갤러리</a></li>
+                    <li><a href="#">관람안내</a></li>
+                    <li><a href="#">게시판</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div id="content">
+            <!--#home>h3+figure-->
+            <div id="home">
+                <h3>HOME</h3>
+                <figure>
+                    <img src="img/design/mosasupt4I.jpeg" alt="덴마크디자인전">
+                </figure>
+            </div><!--home-->
+            
+            <div id="img_gallery">
+                <!--.title+.img_list-->
+                <div class="title">
+                    <!--h3+ul>li*2>img-->
+                    <h3>이미지 갤러리</h3>
+                    <ul>
+                        <li><img src="img/design/d_left.jpg" alt="이전"></li>
+                        <li><img src="img/design/d_right.jpg" alt="다음"></li>
+                    </ul>
+                </div>
+                <div class="img_list">
+                    <!--ul>li>a>img+.over_box-->
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/design/mosasupt4I_s.jpeg" alt="Home">
+                                <span class="over_box">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/design/mosagtvIzy_s.jpeg" alt="Home">
+                                <span class="over_box">전시소개</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/design/mosaUtpAKM_s.jpeg" alt="Home">
+                                <span class="over_box">전시구성</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--img_gallery-->
+            
+            
+        </div><!--content-->
+        
+        
+        
+    </div><!--wrap-->
+    
+    
+</body>
+</html>

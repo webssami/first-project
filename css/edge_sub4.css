@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+#menu ul li:nth-child(4) a{
+    background: #379d9d;
+}
+
+/* sub content....................*/
+#sub_content{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#sub_content h2{
+    font-size: 2em;
+    margin:50px 0 40px;
+    text-align: center;
+    position: relative;
+}
+#sub_content h2::after{
+    content: '';
+    width: 100px;
+    height: 4px;
+    background: #45a4a5;
+    position: absolute;
+    bottom: -5px;
+    left: calc(50% - 50px);
+}
+
+#sub_content p{
+    color: #555;
+    font-size: 1.4em;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+/* work list.......................*/
+
+#work_list ul{
+    display: flex;
+}
+#work_list ul li{
+    width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#work_list ul li:nth-child(odd){
+    background: #d4d9de;
+}
+#work_list ul li:nth-child(even){
+    background: #aab3ba;
+}
+#work_list ul li figure{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#work_list ul li figure span{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 2em;
+}
+
+
+
+
+/* 반응형 스타일................... */
+@media screen and (max-width:768px){
+    #work_list ul{
+        flex-wrap: wrap;
+        
+    }
+    #work_list ul li{
+        width: 50%;
+    }
+    #work_list ul li:nth-child(3){
+        order: 4;
+    }
+    
+}/* 모바일 : 0-768px */
+
+@media screen and (min-width:769px){
+    #work_list ul li figure span{
+        transition: all 0.5s;
+    }
+    #work_list ul li:hover figure span{
+        transform: rotate(360deg);
+    }
+    
+}/* PC : 769px 이상~ */
+
+
+
+
+
+
+
+
+
+

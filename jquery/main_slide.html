@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> main slide </title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){ //jQuery 시작
+            var visual=$('#main_wrap .main_img ul li');
+            var len = visual.length;
+            //console.log(len);
+            var cnt = 0; //첫번째 이미지
+            var setTime; //시간 기억
+            var dir = 'next'; //다음 이미지 방향
+            
+            //다음 버튼 클릭시 다음 번호 카운트 - 이미지번호를 가지고 슬라이드 함수 호출
+            $('.next').click(function(){
+               dir = 'next';
+                var n = cnt + 1;
+                if(n == len){
+                    n = 0;
+                }
+                console.log(n);
+                move(n);
+            });
+            
+            //이전 버튼 클릭시 이전 번호 카운트 - 이미지번호를 가지고 슬라이드 함수 호출
+            $('.prev').click(function(){
+               dir = 'prev';
+                var n = cnt - 1;
+                if(n < 0){
+                    n = len - 1;
+                }
+                console.log(n);
+                move(n);
+            });
+            
+            //이미지 슬라이드 함수선언
+            function move(i){
+                //현재 이미지 
+                var cntImg = visual.eq(cnt);
+                
+                //새로 보여질 이미지
+                var nextImg = visual.eq(i);
+                
+                if(dir=='prev'){
+                    cntImg.css({left:0}).stop().animate({left:'100%'});
+                    nextImg.css({left:'-100%'}).stop().animate({left:0});
+                }else{
+                    cntImg.css({left:0}).stop().animate({left:'-100%'});
+                    nextImg.css({left:'100%'}).stop().animate({left:0});
+                }
+                cnt = i;
+            }
+            
+            timer();
+            
+            //자동 슬라이딩 함수
+            function timer(){
+                setTime = setInterval(function(){
+                    var n = cnt + 1;
+                    if(n == len){
+                        n = 0;
+                    }
+                    //console.log(n);
+                    move(n);
+                }, 5000);
+            };
+            
+            //이미지 영역에 마우스 오버시 슬라이딩 중지 마우스 아웃시 다시 슬라이딩
+            $('#main_wrap').mouseover(function(){
+                clearInterval(setTime);
+            }).mouseout(function(){
+                timer();
+            });
+            
+        });//jQuery 종료
+
+    </script>
+    <link rel="stylesheet" href="j_css/reset.css">
+    <style>
+        #main_wrap{
+            background: #eee;
+        }
+        .main_img{
+            /*background: #ff0;*/
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .main_img ul{
+            width: 100%;
+            padding-top: 31.25%;
+        }
+        .main_img ul li{
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+        }
+        .main_img ul li:first-child{
+            left: 0;
+        }
+        .main_img ul li a{
+            display: block;
+        }
+        .main_img ul li a img{
+            width: 100%;
+        }
+        
+        /*이전, 다음 버튼 스타일*/
+        .prev, .next{
+            position: absolute;
+            z-index: 10;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 20px;
+            cursor: pointer;
+        }
+        .next{
+            right: 20px;
+            left: auto;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <!--#main_wrap>.main_img>(ul>li>a>img)+.prev+.next-->
+    <div id="main_wrap">
+        <div class="main_img">
+            <ul>
+                <li><a href="#"><img src="j_img/mslide_img/main_0.jpg" alt="slide1"></a></li>
+                <li><a href="#"><img src="j_img/mslide_img/main_1.jpg" alt="slide2"></a></li>
+                <li><a href="#"><img src="j_img/mslide_img/main_2.jpg" alt="slide3"></a></li>
+            </ul>
+            <div class="prev"><img src="j_img/mslide_img/arrow-prev.png" alt="이전"></div>
+            <div class="next"><img src="j_img/mslide_img/arrow-next.png" alt="이전"></div>
+        </div>
+    </div><!--main_wrap-->
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> method </title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){ //jQuery 시작
+            //속성값 변경
+            $('a.link').attr('href','http://naver.com');
+            
+            //속성 추가
+            $('a.link').attr('target','_blank');
+            
+            //속성 제거
+            $('a.link').removeAttr('target');
+            
+            
+            //클래스 추가
+            $('a.link').addClass('red');
+            
+            //클래스 제거
+            $('a.link').removeClass('red');
+            
+            //텍스트 변경
+            $('p#change1').text('변경후 1');
+            
+            //.not()메소드 : ~을 제외하고 선택
+            $('#list p').not('#change2').css('color','#f00');
+            
+            //.next():바로 다음 형제
+            $('#change2').next().css({textDecoration:'underline'});
+            
+            //.parent():부모
+            $('#change1').parent().parent().css({background:'#ff0'});
+            
+            //.find():아래 후손 선택
+            var list = $('#list');
+            list.find('#change1').css('font-weight','bold');
+            
+            //.html():내용과 html tag까지 가져온다.
+            $('#change1').html($('#change2').html());
+            
+            //.prepend() : 내용중에 앞에 삽입
+            $('#change3').prepend('<strong>앞 부분에 삽입</strong>');
+            
+            //.append() : 내용 뒷부분에 삽입
+            $('#change3').append('<strong>뒷 부분에 삽입</strong>');
+            
+            //.replaceWith() : 다른태그로 변경
+            $('#change2').replaceWith('<h1>제목태그로 변경</h1>');
+            
+            //.remove() : 태그 제거
+            $('h1').remove();
+            
+        });//jQuery 종료
+
+    </script>
+    <style>
+        .red{
+            text-decoration: none;
+            color: #f00;
+        }
+    
+    </style>
+</head>
+<body>
+    <!--#list>p#change${변경전 $}*3-->
+    <div id="list">
+        <p id="change1">변경전 1</p>
+        <p id="change2">변경전 <u>2</u></p>
+        <p id="change3">변경전 3</p>
+    </div>
+    <a href="#" class="link">네이버</a>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> ice more + rollover </title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){ //jQuery 시작
+            
+            //어두운 더보기 이미지 태그추가
+            $('#ice_more ul li a').append('<div class="h_box"></div>');
+            
+            $('#ice_more ul li').mouseover(function(){
+                $(this).find('a .h_box').addClass('over');
+            }).mouseout(function(){
+                $(this).find('a .h_box').removeClass('over');
+            });
+            
+            
+        });//jQuery 종료
+
+    </script>
+    <link rel="stylesheet" href="j_css/reset.css">
+    <style>
+        #ice_more ul{
+            display: flex;
+        }
+        #ice_more ul li{
+            width: 150px;
+        }
+        #ice_more ul li a{
+            display: block;
+            position: relative;
+        }
+        #ice_more ul li a span{
+            text-align: center;
+            display: block;
+        }
+        #ice_more ul li a span.category{
+            color: #000;
+            font-weight: bold;
+            padding-top: 10px;
+        }
+        
+        /* 마우스 오버시 어두운 배경에 더보기 아이콘 표시 */
+        .h_box{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .over{
+            background: rgba(0,0,0, 0.5) url(j_img/btn.png) center no-repeat;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!--#ice_more>ul>li>a>span.category+span.pro_img>img-->
+    <div id="ice_more">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="category">아이스크림</span>
+                    <span class="pro_img"><img src="j_img/ice123/icecream_01.jpg" alt="1가지맛"></span>
+                    
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="category">아이스크림</span>
+                    <span class="pro_img"><img src="j_img/ice123/icecream_02.jpg" alt="2가지맛"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="category">아이스크림</span>
+                    <span class="pro_img"><img src="j_img/ice123/icecream_03.jpg" alt="3가지맛"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    
+    
+</body>
+</html>

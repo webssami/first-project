@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>모서리 둥글게, 박스 그림자, 글자 그림자, 배경이미지 블릿화</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            border-radius: 10px 10px 0 0;
+            border:3px solid #000;
+            width: 400px;
+            text-align: center;
+            box-shadow: 5px 5px 5px rgba(230, 62, 22, 0.5) inset, 10px 10px 10px rgba(0,0,255,0.8);
+            text-shadow: 2px 2px 0 #ff0;
+            margin-top:20px;
+            margin-left:20px;
+        }
+        .box{
+            width: 300px;
+            font-size: 13px;
+            margin: 30px 40px;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+
+        }
+        #box1 ul{
+            margin-left: 20px;
+            padding: 10px;
+        }
+        #box1 ul li{
+            list-style: url(img/bullet.gif);
+        }
+        #box2 ul li{
+            list-style: none;
+            background: url(img/bullet.gif) no-repeat 0 10px;
+            padding-left: 20px;
+        }
+        li.first{
+            margin-bottom: 20px;
+        }
+        .arrow{
+            border-bottom: 30px solid rgb(206, 2, 2);
+            border-left: 60px solid transparent;
+            width: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="arrow"></div>
+    <h1>모서리 둥글게 처리</h1>
+    <div id="box1" class="box">
+        <ul>
+            <li class="first">목록스타일을 활용한 블릿기호 변경 - 이미지 블릿 리스트</li>
+            <li>목록스타일을 활용한 블릿기호 변경 - 이미지 블릿 리스트</li>
+        </ul>
+    </div>
+    
+    <div id="box2" class="box">
+        <ul>
+            <li class="first">백그라운드를 활용한 블릿기호 변경 - 블릿 기호를 백그라운드 이미지로 활용</li>
+            <li>백그라운드를 활용한 블릿기호 변경 - 블릿 기호를 백그라운드 이미지로 활용</li>
+        </ul>
+    </div>
+</body>
+</html>

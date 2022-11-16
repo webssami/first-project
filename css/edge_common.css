@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+/* 초기화 */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font: 13px '맑은 고딕',sans-serif;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+img{
+    border: 0;
+    vertical-align: top;
+}
+
+/* header.............. */
+
+header{
+    background: #36595f;
+    height: 60px;
+}
+#header_wrap{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+#logo{
+    float: left;
+    padding-top: 5px;
+}
+#logo a img{
+    width: 120px;
+}
+
+#menu{
+    float: right;
+    width: 60%;
+}
+#menu ul{
+    display: flex;
+}
+#menu ul li{
+    flex-grow: 1;
+}
+#menu ul li a{
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    text-align: center;
+}
+#menu ul li:hover a{
+    background: #379d9d;
+}
+
+#toggle{
+    display: none;
+}
+#header_wrap label{
+    display: none;
+}
+
+/* footer .....................*/
+footer{
+    height: 40px;
+    background: #333;
+}
+footer > p{
+    color: #fff;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 40px;
+}
+
+.go_top{
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    
+}
+.go_top a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/edge_img/sprite_btn.png) 0 -60px no-repeat;
+    text-indent: -9999px;
+}
+
+
+
+
+
+
+/*  반응형 스타일 .......................  */
+@media screen and (max-width:768px){
+    #header_wrap label{
+        display: block;
+        float: right;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    #menu{
+       position: absolute; 
+        top: 60px;
+        width: 80%;
+        background: #333;
+        right: 0;
+    }
+    #menu ul{
+        display: block;
+    }
+    #menu ul li a{
+        text-align: left;
+        text-indent: 20px;
+        border-bottom: 1px solid #888;
+    }
+    
+    #toggle + #header_wrap > #menu{
+        display: none;
+    }
+    #toggle:checked + #header_wrap > #menu{
+        display: block;
+    }
+    footer > p{
+        text-align: center;
+    }
+    
+    .go_top{
+        display: none;
+    }
+    
+}/* 모바일 : 0-768px */
+
+
+
+
+
+
+
+
+
+
+

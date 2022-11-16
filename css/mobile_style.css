@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+/*초기화*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Helvetica', sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    border: 0;
+}
+
+
+/* main_header */
+
+#main_header{
+    height: 45px;
+    background: url(../img/mobile/header_background.png) repeat;
+    position: relative;
+}
+
+#main_header > a, label.right{
+    height: 32px;
+    position: absolute;
+    display: block;
+    top: 7px;
+    text-indent: -9999px;
+}
+#main_header > a{
+    width: 62px;
+    left: 5px;
+    background: url(../img/mobile/sprites.png) 0 0 no-repeat;
+}
+label.right{
+    width: 32px;
+    right: 5px;
+    background: url(../img/mobile/sprites.png) -62px 0 no-repeat;
+}
+#main_header > h1{
+    text-align: center;
+    color: #fff;
+    line-height: 45px;
+}
+
+/*toggle_gnb_wrap................*/
+#toggle{
+    display: none;
+}
+#toggle + #wrap > #toggle_gnb_wrap{
+    display: none;
+}
+#toggle:checked + #wrap > #toggle_gnb_wrap{
+    display: block;
+}
+
+/* float을 활용한 고정 사이즈 */
+#toggle_gnb_wrap{
+    background: #363636;
+    padding: 15px;
+}
+#toggle_gnb{
+    background: #fff;
+    padding: 5px;
+}
+#toggle_gnb ul{
+    overflow: hidden;
+}
+#toggle_gnb ul li{
+    float: left;
+    width: 80px;
+}
+
+/*top_gnb ...float활용 비율사이즈 */
+#top_gnb{
+    overflow: hidden;
+    background: #b42111;
+    border-bottom: 1px solid #000;
+}
+#top_gnb > div{
+    float: left;
+    width: 25%;
+}
+#top_gnb > div a{
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+}
+
+/* bottom_gnb : display 속성의 table,table-cell  */
+
+#bottom_gnb{
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #000;
+}
+#bottom_gnb > div{
+    display: table-cell;
+}
+#bottom_gnb > div a{
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #000;
+    position: relative;
+}
+#bottom_gnb > div a::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 15px;
+    border-right: 1px solid #000;
+    top: 9px;
+    left: 0px;
+}
+#bottom_gnb > div:first-child a::after{
+    border-right: 0;
+}
+
+/*image*/
+#image{
+    text-align: center;
+}
+#image img{
+    width: 100%;
+    max-width: 550px;
+}
+
+
+
+
+
+
+

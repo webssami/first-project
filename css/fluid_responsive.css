@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+/*초기화...... */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font: 0.8em '맑은 고딕',sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    border: 0;
+}
+
+/* header */
+header{
+    background: #2ecc71;
+}
+
+#top{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#navi ul{
+    overflow: hidden;
+}
+#navi ul li{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+#navi ul li a{
+    display: block;
+    padding: 10px;
+}
+#logo{
+    text-align: center;
+}
+
+/* hgroup............ */
+hgroup{
+    background: #219af7;
+    padding: 40px 0;
+    color: #fff;
+    text-align: center;
+}
+hgroup h3{
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* gallery ................ */
+
+#gallery{
+    max-width:1100px;
+    margin: 0 auto;
+}
+
+#gallery ul li{
+    width: 90%;
+    margin: 10px 5%;
+}
+#gallery ul li img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+/*footer...................*/
+footer{
+    background: #474747;
+    padding: 20px;
+}
+footer p{
+    color: #fff;
+    text-align: center;
+}
+
+
+
+/* 반응형 스타일.....................  */
+@media screen and (min-width:501px) and (max-width:767px){
+    
+    #gallery ul{
+        overflow: hidden;
+    }
+    #gallery ul li{
+        width: 46%;
+        margin: 10px 2%;
+        float: left;
+    }
+    
+    
+    
+}/* 501 - 767 */
+
+@media screen and (min-width:768px){
+    /* header  */
+    header{
+        overflow: hidden;
+        height: 50px;
+    }
+    #logo{
+        float: left;
+    }
+    #logo a img{
+        margin-top: -23px;
+    }
+    #navi{
+        float: right;
+        margin-top: 5px;
+    }
+    
+    /*gallery*/
+    #gallery ul{
+        overflow: hidden;
+    }
+    #gallery ul li{
+        width: 23%;
+        margin: 10px 1%;
+        float: left;
+    }
+    footer p{
+        text-align: left;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    
+}/* 768px 이상~ */
+
+
+
+
+
+
+

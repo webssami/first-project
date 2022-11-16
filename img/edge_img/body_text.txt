@@ -1,0 +1,33 @@
+﻿
+Voluptas Assumenda Est 
+Dolore Magnam Aliquam Quaerat Voluptatem 
+---------------------------------------------------------------------------
+Edge ! We are Edge Template
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nesciunt odit sunt vitae voluptatibus. Ad animi dicta dolore et illo incidunt sint.
+
+
+Meet the Team ------------------------------------------------------------------------------
+kristianaWeb Developer
+
+Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commo, magnase quis lacinia ornare, quam ante aliqua nisi, eu iaculis leo purus venenatis scelerisque. 
+-------------
+
+williamsonWeb Developer
+
+Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commo, magnase quis lacinia ornare, quam ante aliqua nisi, eu iaculis leo purus venenatis scelerisque. 
+-------------
+
+
+miranda joyWeb Desginer
+
+Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commo, magnase quis lacinia ornare, quam ante aliqua nisi, eu iaculis leo purus venenatis scelerisque. 
+-------------
+
+
+steve thomasWeb Developer
+
+Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commo, magnase quis lacinia ornare, quam ante aliqua nisi, eu iaculis leo purus venenatis scelerisque. 
+-------------
+
+© Copyright 2015 Edge | Powered by jQuery Rain

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> tab news </title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){ //jQuery 시작
+            
+            var len = $('.tab li').length;
+            var cnt = Math.floor(Math.random()*len);
+            //console.log(cnt + ', '+len);
+            
+            $('.tab_body > div').hide();
+            $('.tab_body > div').eq(cnt).show();
+            $('.tab li').eq(cnt).addClass('selected');
+            
+            //tab버튼 클릭시 해당 콘텐츠 보여주기
+            $('.tab li').click(function(){
+                $('.tab li').removeClass('selected');
+                $(this).addClass('selected');
+                
+                $('.tab_body > div').hide();
+                $('.tab_body > div').eq($(this).index()).show();
+                
+                return false;
+            });
+            
+            
+        });//jQuery 종료
+
+    </script>
+    <link rel="stylesheet" href="j_css/reset.css">
+    <style>
+        #container{
+            width: 400px;
+            margin: 10px auto;
+        }
+        .tab{
+            display: flex;
+        }
+        .tab li{
+            width: 25%;
+        }
+        .tab li a{
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: #e9eff8;
+            color: #255b9a;
+            border: 1px solid #255b9a;
+            border-right: none;
+            font-weight: bold;
+        }
+        .tab li:last-child a{
+            border-right: 1px solid #255b9a;
+        }
+        .tab li.selected a{
+            background: #fff;
+            border-bottom: none;
+            padding-bottom: 1px;
+        }
+        .tab_body > div{
+            border: 1px solid #255b9a;
+            border-top: none;
+            padding: 10px;
+            line-height: 1.6em;
+        }
+        .tab_body > div ul{
+            margin-left: 15px;
+        }
+        .tab_body > div ul li{
+            list-style: disc;
+        }
+    </style>
+</head>
+<body>
+    <!--#container>ul.tab>li*5>a[href=#]-->
+    <div id="container">
+        <ul class="tab">
+            <li><a href="#">뉴스 줌</a></li>
+            <li><a href="#">사회</a></li>
+            <li><a href="#">경제</a></li>
+            <li><a href="#">IT</a></li>
+        </ul>
+        <!--.tab_body>div*5-->
+        <div class="tab_body">
+            <div>
+                <ul>
+
+                  <li>靑 "일부 오해…잘못 얘기" 기초연금 여론몰이</li>
+
+                  <li>2013 미스월드 우승자</li>
+
+                  <li>손학규, 10월 재보선출마 부정적</li>
+
+                  <li>해외 소재 우리 문화재 15만점</li>
+
+                  <li>경복궁옆 호텔…인근주민 생각은</li>
+
+                </ul>
+            </div>
+            <div>
+                <ul>
+
+                  <li>밀양 송전탑 공사현장 전운</li>
+
+                  <li>노사정위, 朴 방문으로 힘실리나</li>
+
+                  <li>전교조, 법외노조 반대 투쟁</li>
+
+                  <li>"DNA는 보이지 않는 목격자"</li>
+
+                  <li>공직자행동강령 위반자늘어도 중징계는 줄어</li>
+
+                </ul>
+            </div>
+            <div>
+                <ul>
+
+                  <li>건설사 10곳중 6곳 자금난 심화</li>
+
+                  <li>빚권하는 금융회사 '약탈적 금융'</li>
+
+                  <li>보금자리 공공분양 15%로 축소</li>
+
+                  <li>규제, 매년 1천건씩 는다</li>
+
+                  <li>순매수 기록 경신 중인 외국인, 매수 여력 남았다</li>
+
+                </ul>
+            </div>
+            <div>
+                <ul>
+
+                  <li>뇌파로 걷는 로봇 다리 나왔다</li>
+
+                  <li>브이월드, 한국판 3D 지도 완성</li>
+
+                  <li>아이디어 있으면 특허·창업 지원</li>
+
+                  <li>갤럭시기어, 새 시장 열수있을까</li>
+
+                  <li>안드로이드 태블릿 점유율 아이패드 추월 '코앞'</li>
+
+                </ul>
+            </div>
+            
+        </div><!--tab_body-->
+    </div><!--container-->
+</body>
+</html>

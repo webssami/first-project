@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form tag</title>
+    <style>
+        #btn1, #btn2{
+            background: #f00;
+            color: #fff;
+            width: 100px;
+            height: 40px;
+            border:0;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        #btn2{
+           background: #189d18; 
+        }
+        
+        #car2{
+            width: 100px;
+            height: 30px;
+            border:1px solid #00f;
+            outline:none;
+            font-size: 14px;
+            appearance:none;
+            background:url(img/bullet2.gif) 95% 8px no-repeat;
+            padding-left: 5px;
+        }
+        #id, #pw{
+            width: 200px;
+            height: 30px;
+            margin: 5px 0;
+            color: #f00;
+            background: #ccc;
+            border:1px solid #999;
+        }
+        #id::placeholder{
+            color: #fff;
+        }
+        #id:-ms-input-placeholder{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <form action="gradation_button.html" name="form_test" id="form_test" method="post">
+        <label for="id">id :</label>
+        <input type="text" id="id" name="id" maxlength="10" placeholder="아이디"> <br>
+        
+        <label for="pw">password : </label>
+        <input type="password" id="pw" name="pw"><br>
+        
+        <textarea rows="5" cols="30" id="texts" name="texts">
+        </textarea> <br>
+        
+        성별 : <input type="radio" id="m" name="sex" value="m" checked> <label for="m">남자</label>
+              <input type="radio" id="f" name="sex" value="f"> <label for="f">여자</label>
+        <br>
+        좋아하는 음식?
+        <input type="checkbox" name="food" id="ch1" value="ch1" checked><label for="ch1">짜장면</label>
+        <input type="checkbox" name="food" id="ch2" value="ch2"><label for="ch2">떡볶이</label>
+        <input type="checkbox" name="food" id="ch3" value="ch3"><label for="ch3">피자</label>
+        <input type="checkbox" name="food" id="ch4" value="ch4"><label for="ch4">볶음밥</label>
+        <br>
+        어떤 차를 소유하고 계십니까?
+        <select name="car" id="car1" size="4" multiple>
+            <option selected>없다</option>
+            <option>bmw</option>
+            <option>에쿠스</option>
+            <option>sm5</option>
+            <option>그렌져</option>
+            <option>기타</option>
+        </select>
+        <select name="car" id="car2" size="1">
+            <option selected>없다</option>
+            <option>bmw</option>
+            <option>에쿠스</option>
+            <option>sm5</option>
+            <option>그렌져</option>
+            <option>기타</option>
+        </select>
+        <br>
+        <input type="submit" value="전송" id="btn1">
+        <input type="reset" value="취소" id="btn2">
+        
+    </form>
+</body>
+</html>

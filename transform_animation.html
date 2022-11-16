@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform animation</title>
+    <style>
+        #images figure img{
+            border: 1px solid #000;
+        }
+        #images figure:nth-child(1) img{
+            transform: rotate(0deg);  /* 기본 회전 */
+            /* transform: rotateX(120deg); */ /* X측 기준 회전 */
+            /* transform: rotateY(180deg); */       /* Y측 기준 회전 */
+            transition: all 0.5s ease-out;
+        }
+        #images figure:nth-child(1) img:hover{
+            transform: rotate(360deg);
+        }
+        #images figure:nth-child(2){
+            width: 100px;
+            background: #ff0;
+            overflow: hidden;
+        }
+        #images figure:nth-child(2) img{
+            transform: scale(1);         /* 크기 */
+            transition: all 0.3s ease-out;
+        }
+        #images figure:nth-child(2) img:hover{
+            transform: scale(1.5);
+        }
+        #images figure:nth-child(3) img{        
+            transform: skew(0deg, 0deg);     /* 잡아땅기기 */
+            transition: all 1s ease-out;
+        }
+        #images figure:nth-child(3) img:active{
+            transform: skew(10deg, 10deg);
+        }
+        #images figure:nth-child(4) img{
+            transform: translate(-30px ,-50px);  /* 위치 이동 */ /* 마지막 이미지가 위에 올라온다 */
+        }
+        #mouse{
+            width: 50px;
+            height: 100px;
+            
+      background: red;
+        }
+        #mouse img{
+        position: relative;
+       
+        }
+        #mouse img:hover{
+            -webkit-animation: mymove 0.5s linear infinite alternate; /* Safari 4.0 - 8.0 */
+            animation: mymove 0.5s linear infinite alternate ;
+        }
+        @keyframes mymove {
+        from {top: 0px;} /* 0% */
+        to {top: -10px;} /* 100% */
+        }
+    </style>
+</head>
+<body>
+    https://www.airklass.com/k/YTTCCV?v=BCNJ4CS
+    <div id="mouse">
+        <img src="img/mouse.png" alt="">
+    </div>
+    <div id="images">
+        <figure>
+            <img src="img/abo_img/img_a.gif" alt="A형">
+        </figure>
+        <figure>
+            <img src="img/abo_img/img_ab.gif" alt="AB형">
+        </figure>
+        <figure>
+            <img src="img/abo_img/img_b.gif" alt="B형">
+        </figure>
+        <figure>
+            <img src="img/abo_img/img_o.gif" alt="O형">
+        </figure>
+    </div>
+    
+</body>
+</html>

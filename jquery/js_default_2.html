@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 기본태그2</title>
+    
+    <style>
+        #view{
+            border: 1px solid #000;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+   <div id="view"></div> 
+   
+   
+   <script>
+        var num1=10, num2=10;
+       // var view= document.getElementById('view');
+        if(num1 < num2){
+            document.querySelector('#view').innerHTML='num1이 num2보다 작다';
+           
+        }else if(num1 > num2){
+            document.querySelector('#view').innerHTML='num1이 num2보다 크다';
+        }else{
+            document.querySelector('#view').innerHTML='num1과 num2는 같다';
+        }
+       
+       //for 반복문
+       var len=11;
+       for(var i = 5;i < len;i++){
+           console.log(i);
+       }
+       //5행 3열 별 반복처리
+       for(var k=1;k<=5;k++){  //행
+           for(var j=1;j<=3;j++){  //열
+               document.write('★ ');
+           }
+           document.write('<br>');
+       }
+       
+       //함수 선언
+       function fnCall(){
+           document.write('함수 호출');
+       }
+       
+       //함수 호출
+       fnCall();
+       
+       //값 리턴 함수 선언
+       function ref(x,y){
+           var value;
+           value = x * y;
+           document.write('<br>'+value);
+           return value;
+       }
+       
+       //값 리턴 함수 호출
+       var fn_ref = ref(5,3);
+       document.write('<br> fn_ref:' + fn_ref);
+        
+    </script>
+</body>
+</html>

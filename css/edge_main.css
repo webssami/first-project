@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+/* content style ......  */
+#content{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+#main_title{
+    height: 250px;
+    background: url(../img/edge_img/base_2.jpg) 0 0 no-repeat;
+}
+
+#main_title ul{
+    padding-top: 80px;
+    padding-left: 30px;
+}
+#main_title ul li h2{
+    display: inline-block;
+    background: #fff;
+    padding: 5px 10px;
+    font-size: 1.6em;
+}
+#main_title ul li h3{
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+h4#t_title{
+    text-align: center;
+    font-size: 2.2em;
+    margin: 50px 0 20px;
+}
+
+p.t_text{
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #555;
+}
+
+/* work.............. */
+.title{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: #444;
+    font-size: 1.3em;
+}
+.more{
+    display: none;
+}
+.work_list ul{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+.work_list ul li{
+    width: 18%;
+}
+.work_list ul li img{
+    width: 100%;
+}
+
+.team_list ul{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.team_list ul li{
+    width: 24%;
+    border: 1px solid #ccc;
+    padding: 7px;
+    box-sizing: border-box;
+}
+.team_list ul li img{
+    width: 100%;
+}
+.team_list ul li a{
+    color: #555;
+}
+.team_list ul li a .name{
+    overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.team_list ul li a .name strong{
+    float: left;
+}
+.team_list ul li a .name span{
+    float: right;
+    font-size: 0.8em;
+}
+
+.clients_list ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+/*반응형.....................*/
+@media screen and (max-width:768px){
+    #main_title ul li h2{
+        font-size: 1.4em;
+    }
+    #main_title ul li h3{
+        font-weight: normal;
+    }
+    h4#t_title{
+        font-size: 1.8em;
+    }
+    p.t_text{
+        font-size: 1.4em;
+    }
+    
+    /* work..... */
+    .more{
+        display: block;
+        float: right;
+        background: url(../img/edge_img/sprite_btn.png) 8px 8px no-repeat;
+        width: 30px;
+        height: 30px;
+        text-indent: -9999px;
+    }
+    .title{
+        overflow: hidden;
+    }
+    .title > h3{
+        float: left;
+    }
+    
+    .work_list ul li{
+        display: none;
+        width: 80%;
+    }
+    .work_list ul li:first-child{
+        display: block;
+        
+    }
+    
+    /*team...........*/
+    .team_list ul{
+        display: block;
+    }
+    .team_list ul li{
+        width: auto;
+        margin: 10px;
+    }
+    #clients{
+        display: none;
+    }
+    
+    
+    
+}/* 모바일 : 0-768px */
+
+
+
+
+
+
+

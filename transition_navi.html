@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>애니메이션 네비게이션바</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        
+        #navi{
+            height: 40px;
+            background:#810e0e;
+        }
+        .mnavi > li{
+            float:left;
+            position: relative;
+        }
+        .mnavi > li > a{
+            display: block;
+            padding: 0 30px;
+            color: #fff;
+            line-height: 40px;
+        }
+        .mnavi > li:hover > a{
+            background:#4d0303;
+        }
+        
+        /* snavi -서브메뉴 ///////////////////////////////*/
+        
+        .mnavi > li .snavi{
+            position: absolute;
+            width:100%;
+            background:#f2cbcb;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        .mnavi > li:hover .snavi{
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .mnavi > li .snavi li a{
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            color: #4d0303;
+            text-align: center;
+        }
+        .mnavi > li .snavi li a:hover{
+            background: #4d0303;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="navi">
+        <ul class="mnavi">
+            <li>
+                <a href="#">Main menu01</a>
+                <ul class="snavi">
+                    <li><a href="#">Sub menu01</a></li>
+                    <li><a href="#">Sub menu02</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Main menu02</a>
+                <ul class="snavi">
+                    <li><a href="#">Sub menu01</a></li>
+                    <li><a href="#">Sub menu02</a></li>
+                    <li><a href="#">Sub menu03</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Main menu03</a>
+                <ul class="snavi">
+                    <li><a href="#">Sub menu01</a></li>
+                    <li><a href="#">Sub menu02</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Main menu04</a>
+                <ul class="snavi">
+                    <li><a href="#">Sub menu01</a></li>
+                    <li><a href="#">Sub menu02</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

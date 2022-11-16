@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> trigger()메소드와 문서사이즈 확인 </title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){ //jQuery 시작
+            var box = $('#box');
+            
+            $(window).resize(function(){
+                $('#width').text(box.width());
+                $('#height').text(box.height());
+                $('#innerWidth').text(box.innerWidth());
+                $('#innerHeight').text(box.innerHeight());
+                $('#outerWidth').text(box.outerWidth());
+                $('#outerHeight').text(box.outerHeight());
+                
+                //가로길이가 500px보다 크면 배경 노랑색 그렇지 않으면 배경색 제거
+                if(box.width() > 500){
+                    $('#width').parent().css('background','#ff0');
+                }else{
+                    $('#width').parent().css('background','none');
+                }
+                
+                //패딩과 테두리를 포함한 가로길이가 700px보다 크면 글자색 빨강 그렇지 않으면 글자색 검정
+                if(box.outerWidth() > 700){
+                    $('#outerWidth').parent().css('color','#f00');
+                }else{
+                    $('#outerWidth').parent().css('color','#000');
+                }
+                
+            });//end:resize
+            
+            $(window).trigger('resize');
+        });//jQuery 종료
+
+    </script>
+    <link rel="stylesheet" href="j_css/reset.css">
+    <style>
+        #box{
+            border: 5px solid #00f;
+            margin: 20px;
+            padding: 30px;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+    
+        #box ul li{
+            margin: 5px;
+            border: 1px solid #1daf1d;
+        }
+    </style>
+</head>
+<body>
+    <!--#box>ul>li>span+span#width-->
+    <div id="box">
+        <ul>
+            <li><span>박스의 width=</span><span id="width">0</span></li>
+            <li><span>박스의 height= 박스의 height= 박스의 height=</span><span id="height">0</span></li>
+            <li><span>박스의 innerWidth=</span><span id="innerWidth">0</span></li>
+            <li><span>박스의 innerHeight=</span><span id="innerHeight">0</span></li>
+            <li><span>박스의 outerWidth=</span><span id="outerWidth">0</span></li>
+            <li><span>박스의 outerHeight=</span><span id="outerHeight">0</span></li>
+        </ul>
+    </div>
+</body>
+</html>

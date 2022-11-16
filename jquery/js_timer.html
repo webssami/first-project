@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_timer</title>
+    <script>
+        //3초후에 메시지 띄우기
+        /*setTimeout(function(){
+            alert('3초가 지났습니다.');
+        }, 3000);
+        */
+        
+        //1초마다 문서에 날짜와 시간이 출력
+        var timer=setInterval(function(){
+            document.write('<p>'+ new Date() + '</p>');
+        }, 1000);
+        
+        setTimeout(function(){
+            clearInterval(timer);
+        },10100);
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

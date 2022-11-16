@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>mobile layout</title>
+    <link rel="stylesheet" href="css/mobile_style.css">
+</head>
+<body>
+    <!--#wrap>header#main_header>a+h1+label.right-->
+    
+    
+    <input type="checkbox" name="" id="toggle">
+    <div id="wrap">
+        <header id="main_header">
+            <a href="#">Main</a>
+            <h1>Mobile</h1>
+            <label for="toggle" class="right">메뉴</label>
+        </header>
+        
+        <!--메뉴 버튼(label.right) 체크시 아래보이는 메뉴-->
+        <!--#toggle_gnb_wrap>#toggle_gnb>ul>li*8>a[href=#]{버튼}-->
+        
+        <div id="toggle_gnb_wrap">
+            <div id="toggle_gnb">
+                <ul>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                </ul>
+            </div>
+        </div><!--toggle_gnb_wrap-->
+        
+        <!--top_gnb-->
+        <!--nav#top_gnb>div*4>a[href=#]{버튼}-->
+        <nav id="top_gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
+        
+        
+        <!--nav#bottom_gnb>div*5>a[href=#]{버튼}-->
+        <nav id="bottom_gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
+        
+        <div id="image">
+        <img src="img/mobile/lorem_img.jpg" alt="lorem">
+        </div>
+        
+    </div><!--wrap-->
+</body>
+</html>

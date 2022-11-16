@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 스프라이트 이미지 버튼 - 이전 다음 이미지 변경 </title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){ //jQuery 시작
+            var i = 1; //이미지 파일 번호
+            var path1='j_img/day/ex_';
+            var path2='_on.jpg';
+            var altText = ['일반코스','전통문화체험코스','키즈데이 패키지','선비문화체험 코스','인증프로그램'];
+            var link = ['http://naver.com','http://nate.com','http://daum.net','http://naver.com',
+                        'http://nate.com'];
+            
+            /* 다음버튼 클릭시 다음 사진 호출 */
+            $('.next').click(function(){
+                if(i < altText.length){
+                    i++;
+                }else{
+                    i=1;
+                }
+                
+                //console.log(altText.length +'-'+i);
+                
+                view();
+                
+            });
+            
+            // 이미지 보여주는 함수 선언
+            function view(){
+                $('#main img').attr({
+                    src: path1 + i + path2,
+                    alt: altText[i-1]
+                });
+                $('#main a').attr('href', link[i-1]);
+                $('#main img').css('opacity',0.3).fadeTo('fast',1);//fast 대신에 3초 : 300
+                
+                $('#main p').text(altText[i-1]);
+            }
+            
+            
+            /* 이전버튼 클릭시 이전 사진 호출 */
+            $('.prev').click(function(){
+                if(i > 1){
+                    i--;
+                }else{
+                    i=altText.length;
+                }
+                
+                view();
+                
+            });
+            
+            
+        });//jQuery 종료
+
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            border: 0;
+        }
+        li{
+            list-style: none;
+        }
+        body{
+            font:0.8em '맑은 고딕', sans-serif;
+        }
+        a{
+            text-decoration: none;
+        }
+        
+        #gallery{
+            width: 183px;
+            /*background: #ddd;*/
+            margin: 20px;
+        }
+        .title{
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+        .title h3{
+            float: left;
+        }
+        .title ul{
+            float: right;
+        }
+        .title ul li{
+            float: left;
+            width: 14px;
+            height: 15px;
+            background: url(j_img/day/buttons.gif) 0 0 no-repeat;
+            text-indent: -9999px;
+            cursor: pointer;
+        }
+        .title ul li.next{
+            background-position: -14px 0;
+        }
+        #main a p{
+            text-align: center;
+            color: #1553a7;
+        }
+        
+    </style>
+</head>
+<body>
+    <!--#gallery>.title>h3+ul>li*2-->
+    <div id="gallery">
+        <div class="title">
+            <h3>체험코스</h3>
+            <ul>
+                <li class="prev">이전</li>
+                <li class="next">다음</li>
+            </ul>
+        </div><!--title-->
+        
+        <div id="main">
+            <a href="http://naver.com">
+                <img src="j_img/day/ex_1_on.jpg" alt="일반코스">
+                <p>일반코스</p>
+            </a>
+        </div>
+        
+        
+    </div><!--gallery-->
+</body>
+</html>

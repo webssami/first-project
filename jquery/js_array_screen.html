@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array(배열), Screen(화면)</title>
+    <style>
+        #demo{
+            border: 1px solid #000;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="demo"></div>
+    
+    
+    
+    <script>
+        var fruits = ['사과','바나나','배','딸기', '수박','복숭아'];
+        document.write(fruits[0]+'<br>');
+        document.write(fruits[1]+'<br>');
+        document.write(fruits[2]+'<br>');
+        document.write(fruits[3]+'<br>');
+        document.write(fruits+'<br>');
+    
+        //for in 반복문(배열 반복문)
+        /*for(var i in fruits){
+            document.write(fruits[i] + '<br>');
+        }*/
+        
+        for(var i=0;i<fruits.length;i++){
+            document.write(fruits[i] + '<br>');
+        }
+        
+        //screen 객체
+        document.write(screen.width + '<br>');
+        document.write(screen.height + '<br>');
+        
+        //window 객체
+        var txt ='';
+        txt += '<p> innderWidth :' + window.innerWidth + '</p>';
+        txt += '<p> outerWidth :' + window.outerWidth + '</p>';
+        txt += '<p> innderHeight :' + window.innerHeight + '</p>';
+        txt += '<p> outerHeight :' + window.outerHeight + '</p>';
+        
+        
+        document.querySelector('#demo').innerHTML = txt;
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){ //jQuery 시작
+            $('.tab_body > div').hide();
+            $('.tab_body > div').eq(0).show();
+            
+            //tab버튼 클릭시 해당 콘텐츠 보여주기
+            $('.tab li').click(function(){
+                $('.tab li').removeClass('selected');
+                $(this).addClass('selected');
+                
+                $('.tab_body > div').hide();
+                $('.tab_body > div').eq($(this).index()).show();
+                
+                return false;
+            });
+            
+            
+        });//jQuery 종료
+
+    </script>
+    <link rel="stylesheet" href="j_css/reset.css">
+    <style>
+        #container{
+            width: 500px;
+            margin: 10px auto;
+        }
+        .tab{
+            display: flex;
+        }
+        .tab li{
+            width: 20%;
+        }
+        .tab li a{
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: #e9eff8;
+            border-radius: 20px 20px 0 0;
+            color: #255b9a;
+        }
+        .tab li.selected a{
+            background: #255b9a;
+            color: #fff;
+        }
+        .tab_body > div{
+            border: 1px solid #255b9a;
+            padding: 10px;
+            text-indent: 10px;
+            line-height: 1.6em;
+        }
+    </style>
+</head>
+<body>
+    <!--#container>ul.tab>li*5>a[href=#]-->
+    <div id="container">
+        <ul class="tab">
+            <li class="selected"><a href="#">Today</a></li>
+            <li><a href="#">Story</a></li>
+            <li><a href="#">Life</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Game</a></li>
+        </ul>
+        <!--.tab_body>div*5-->
+        <div class="tab_body">
+            <div>
+                이재현, 비자금 보고받은 정황..日 통해서? 경제자문단, 경제민주화 반대에 김앤장 출신도 "사진 찍힐텐데.." 수여식 안오면 장학금 없다? '남자' 송승헌·신세경 진짜 이별하며 눈물 '657일만의 승리' 이재곤 "후회없이 던졌다" 中 공안 '숨 막히는' 훈련 [오늘의 세계] '폐업' 진주의료원에 팽팽한 긴장감 태권도장 관장마저 죽음 택하게 한 판정논란 '천명' 송종호, 이동욱 돕고 강별 구하고..멋지다 엄마가 건강하지 못해 미안해[웹툰]한성 염경엽 감독 "김경문 감독, 스승이지만 승부는.." 티아라엔포 은정 민망한 무대의상 
+            </div>
+            <div>
+                어느 캠퍼스 커플의 사진 “20년 세월이 고스란히 녹아있네” 어느 캠퍼스 커플의 사진에 누리꾼들의 관심이 쏠리고 있다. 최근 온라인 커뮤니티에는 '어느 캠퍼스 커플의 사진'이라는 제목으로 두 장의 사진이 올라왔는데, 평범한 대학교 졸업식 모습이 등장한다. 첫 번째 사진에는 캠퍼스 커플이 갓 태어난 아이를 사이에 두고 찍은 모습이 담겨 있고, 두 번째 사진에는 중년 부부가 대학교 졸업식에서 졸업 가운을 입은 청년을 들어 안고 있는데, 이는 첫 번째 사진 속의 아이가 자라 대학 졸업생이 된 모습을 찍은 것으로 보인다. 어느 캠퍼스 커플의 사진을 접한 누리꾼들은 "20년 세월이 고스란히 녹아있네", "잔잔한 감동이 밀려온다", "세월이 느껴지네" 등의 다양한 반응을 보였다.
+            </div>
+            <div>
+                많은 이들이 결혼에 골인하지만 그 과정이 매번 순탄 한 것만은 아니다. 긴 연애의 끝에 결혼을 결심 했지만, 준비하는 과정에서 다양한 주제로 다툼을 벌이기도 한다. 실제로 보금자리 계약을 다 마친 상태에서도 갈라서는 연인들을 종종 볼 수 있다. 결혼은 두 사람이 만들어 가는 인생의 첫 과정이다. 조금만 양보하고 조심하면 파국을 막을 수 있다. 결혼을 준비하는 연인들이 하지 말아야 할 행동은 어떤 것이 있을까. 
+            </div>
+            <div>
+                경찰서까지 제 발로 찾아가 음주운전을 했다고 자수한 개그맨 유세윤을 향한 의혹들이 걷잡을 수 없이 커지고 있다. 유세윤은 29일 오전 4시께 서울 강남구 신사동 인근에서 술을 마신 후 경기도 고양시 일산경찰서까지 음주운전을 한 혐의를 받고 있다. 일산경찰서에 따르면 그는 이날 오전 직접 경찰서를 찾아와 양심의 가책을 느껴 자수를 했다고 진술한 것으로 전해졌다.
+            </div>
+            <div>
+                [PC] 블리자드 신작 MMO '타이탄' 재개발은 왜? 아키에이지, 전장 콘텐츠 업데이트 PC방 'LOL 서버' 더 못 참겠다! 질의서 발송 휴가비 쏜다! 카발 온라인 '여름휴가 이벤트' 완미세계 기대작 '신의대륙' 6월 2차 테스트 리니지, 50번 째 신규 서버 '커츠' 오픈 실시 [PC] 최고 동접 7만명! 던전스트라이커 캡콤, '리멤버 미' 온라인 예약판매 실시 넥슨, '피파온라인3' 새 모델에 손흥민 선수 무한변신 '이클립스워' 전장의 문 오픈 관심 게임하면서 이성친구 만나는 '리듬엔조이' 워게이밍, E3 2013서 첫 콘솔 타이틀 발표? 
+            </div>
+        </div>
+    </div><!--container-->
+</body>
+</html>

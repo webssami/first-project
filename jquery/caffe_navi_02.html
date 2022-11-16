@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 카페베네 네비게이션 영역에 맞게 전체 서브메뉴 펼침 </title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){ //jQuery 시작
+            
+            $('#navi').mouseenter(function(){
+                $('#navi .navi_sec').stop().slideDown('fast');
+            }).mouseleave(function(){
+                $('#navi .navi_sec').stop().slideUp('fast');
+            });
+            
+            
+        });//jQuery 종료
+
+    </script>
+    <link rel="stylesheet" href="j_css/reset.css">
+    <style>
+        #gnb{
+            height: 90px;
+            border-bottom: 1px solid #000;
+        }
+        #gnb img{
+            vertical-align: top;
+        }
+        .row_c{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        
+        #logo{
+            width: 30%;
+            float: left;
+            margin-top: 18px;
+        }
+        #navi{
+            width: 70%;
+            float: right;
+            margin-top: 25px;
+            height: 65px;
+        }
+        #navi > ul > li{
+            float: left;
+            width: 20%;
+            position: relative;
+        }
+        #navi > ul > li span a{
+            display: block;
+            height: 65px;
+            line-height: 65px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        #navi > ul > li:hover span a{
+            color: #0257c0;
+        }
+        
+        /* 서브메뉴 - navi_sec */
+        #navi > ul > li .navi_sec{
+            position: absolute;
+            top: 65px;
+            left: 0;
+            width: 100%;
+            height: 210px;
+            display: none;
+            background: #efefef;
+        }
+        
+        #navi > ul > li .navi_sec ul li a{
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 20px;
+            color: #666;
+        }
+        #navi > ul > li .navi_sec ul li a:hover{
+            background: #0257c0;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header id="gnb">
+        <!-- navi_wrap -->
+        <div id="navi_wrap" class="row_c">
+            <!-- logo -->
+            <div id="logo">
+                <a href="#" title="home"><img src="j_img/navi_cafe/header_logo.gif" alt="카페베네" /></a>
+            </div>
+            <!-- // logo -->
+            <!-- navi -->
+            <nav id="navi">
+                <ul>
+                    <li id="depth_1">
+                        <span><a href="#" title="회사소개">Company</a></span>
+                        <div class="navi_sec">
+                            <ul>
+                                <li><a href="#" title="CEO">CEO</a></li>
+                                <li><a href="#" title="회사소개">회사소개</a></li>
+                                <li><a href="#" title="회사연혁">회사연혁</a></li>
+                                <li><a href="#" title="사회공헌">사회공헌</a></li>
+                                <li><a href="#" title="로케이션">로케이션</a></li>
+                                <li><a href="#" title="FAMILY BRAND">FAMILY BRAND</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="depth_2">
+                        <span><a href="#" title="프렌차이즈">Franchise</a></span>
+                        <div class="navi_sec">
+                            <ul>
+                                <li><a href="#" title="인테리어">인테리어</a></li>
+                                <li><a href="#" title="개설조건 및 절차">개설조건 및 절차</a></li>
+                                <li><a href="#" title="개설비용">개설비용</a></li>
+                                <li><a href="#" title="FAQ">FAQ</a></li>
+                                <li><a href="#" title="개설문의">개설문의</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="depth_3">
+                        <span><a href="#" title="카페베네 브랜드">Brand</a></span>
+                        <div class="navi_sec">
+                            <ul>
+                                <li><a href="#" title="BRAND STORY">BRAND STORY</a></li>
+                                <li><a href="#" title="COFFE STORY">COFFEE STORY</a></li>
+                                <li><a href="#" title="BI">BI</a></li>
+                                <li><a href="#" title="캐릭터 베피">캐릭터 베피</a></li>
+                                <li><a href="#" title="매장 찾기">매장 찾기</a></li>
+                                <li><a href="#">MEDIA</a></li>
+                                <li><a href="#" title="월페이퍼">월페이퍼</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="depth_4">
+                        <span><a href="#" title="카페베네 메뉴">Menu</a></span>
+                        <div class="navi_sec">
+                            <ul>
+                                <li><a href="#" title="">NEW &amp; BEST</a></li>
+                                <li><a href="#" title="">BEVERAGE</a></li>
+                                <li><a href="#" title="">DESSERT</a></li>
+                                <li><a href="#" title="">SEASON MENU</a></li>
+                                <li><a href="#" title="MD Product">MD Product</a></li>
+                                <li><a href="#" title="영양성분표">영양성분표</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="depth_5">
+                        <span><a href="#" title="Event">Event</a></span>
+                        <div class="navi_sec">
+                            <ul>
+                                <li><a href="#" title="진행중 이벤트">진행중 이벤트</a></li>
+                                <li><a href="#" title="매장별 이벤트">매장별 이벤트</a></li>
+                                <li><a href="#" title="당첨자 공지">당첨자 공지</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul> <!-- navi -->
+            </nav>
+        </div> <!-- navi_wrap -->
+    </header><!-- gnb -->
+
+
+</body>
+</html>
